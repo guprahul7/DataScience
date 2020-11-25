@@ -85,11 +85,13 @@ print(df)
 print(df.shape)
 
 #Selecting ROWS 
+#single row
 print(df.loc['C']) #pass in label of index you want. #.loc is for location
 #returns the contents of a row in a Series format, i.e. vertical table, same as if selecting a column
+
 print(df.iloc[2]) #iloc is for numerical-based index
 
-print(df.loc[['A','B']]) #returns rows in dataframe format
+print(df.loc[['A','B']]) #pass in list of rows for multiple rows. -- returns rows in dataframe format
 
 
 #Subset of rows and columns
@@ -235,6 +237,7 @@ print(x)
 print('--------------------------------------------------------------------\n')
 
 
+import pandas as pd
 
 #GROUPBY -> arranges into a smaller series/dataframe based on the column name
 #GROUPBY -> allows you to group together rows based off of a column and perform some sort of function on them
@@ -411,7 +414,7 @@ print(df), print('\n')
 unique = df['col2'].unique() #returns array of unique values of col2
 print(unique) 
 
-N_unique = df['col2'].nunique() #Nunique returns count of unique values
+N_unique = df['col2'].nunique() #Nunique returns count of data that is unique - ex: 22 or 23
 N_uni = len(df['col2'].unique()) #another way: finding length of array containing unique values
 print(N_unique), print(N_uni), print('\n')
 

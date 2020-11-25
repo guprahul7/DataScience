@@ -70,7 +70,7 @@ y = x ** 2
 
 #SUBPLOTS - allows to specify n_rows and n_cols
 fig, axes = plt.subplots(nrows=1,ncols=2) #prints two axes in one row, like:  |_  |_
-#axes object is just a list of matplotlib axis, so you can do iterate/index operations
+#axes object is just a list of matplotlib axis, so you can do iterate/index operations through those axes
 
 #for current_ax in axes:
  #   current_ax.plot(x,y)

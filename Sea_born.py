@@ -56,7 +56,7 @@ plt.show()
 
 #------------------------------------------------------------------------------------------#
 
-#CATEGORICAL PLOTS -- PLOTTING CATEGORICAL DATA
+#CATEGORICAL/NUMERIC PLOTS -- PLOTTING CATEGORICAL DATA with Numeric Values
 
 tips = sns.load_dataset('tips') 
 print(tips.head())
@@ -80,7 +80,7 @@ print(tips.head())
 
 sns.boxplot(x='day',y='total_bill',data=tips, hue='smoker')
 #Hue feature - Plots w.r.t 'day' and as well as 'smoker' - Great feature of seaborn
-#plt.show()
+plt.show()
 
 # -- VIOLIN PLOT -- v.similar to box plot, but it Gives more info about the distribution of plots itself
 #harder to read though
@@ -131,7 +131,9 @@ print(tc, '\n')
 #sns.heatmap(tc, annot=True, cmap='coolwarm') 
 #annot annotates the actual data on the graph
 #plt.show()
-
+import seaborn as sns
+flights = sns.load_dataset('flights')
+print(flights)
 fpt = flights.pivot_table(index='month',columns='year',values='passengers')
 print(fpt)
 
@@ -163,7 +165,7 @@ print(iris.head(), '\n')
 tips = sns.load_dataset('tips')
 print(tips.head())
 g = sns.FacetGrid(data=tips, col='time', row='smoker') 
-#Two Catgorical Columns time,row, #One numerical column to plot  
+#Two Categorical Columns time,row, #One numerical column to plot  
 g.map(sns.distplot, 'total_bill')
 plt.show()
 
